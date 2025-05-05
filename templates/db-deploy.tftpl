@@ -1,0 +1,4 @@
+sudo apt update
+sudo apt install git mysql-client -y
+git clone -b main https://github.com/MJTI/vprofile-project.git
+mysql -h ${rds-endpoint} -u ${db-user} --password=${db-pass} ${db-name} < /home/ubuntu/vprofile-project/src/main/resources/db_backup.sql
